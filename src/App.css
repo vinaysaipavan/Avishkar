@@ -70,3 +70,34 @@
 .H{
     font-family: "Sora", sans-serif;
 }
+
+.why-column1 img {
+  @apply sm:w-28 sm:h-28 w-14 h-14 rounded-full mb-2.5
+}
+
+.image-profile {
+  p {
+    font-family: inter;
+  }
+}
+
+.why-column1 #expert1 {
+    @apply absolute -top-4 sm:-left-4 -z-10
+}
+.why-column1 #expert1 {
+    @apply absolute -top-4 sm:left-[50px] left-[30px] z-0
+}
+.why-column1 #expert2 {
+    @apply absolute -top-4 sm:left-[120px] left-[70px] z-10
+}
+.why-column1 #expert3 {
+    @apply absolute -top-4  sm:left-[190px] left-[110px] z-20
+}
+.why-column1 #expert4 {
+    @apply absolute -top-4 sm:left-[260px] left-[150px] z-30
+}
+
+.why-column2 {
+  grid-template-rows: auto auto;
+}
+

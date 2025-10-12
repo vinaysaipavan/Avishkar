@@ -1,13 +1,13 @@
 import './App.css';
-import './LetsTalk';
-import './Faq';
 import { Letstalk } from './LetsTalk';
 import { FAQ } from './Faq';
+import { WHY } from './Why';
 
 function App() {
 
   return (
     <>
+    <WHY />
     <Letstalk/>
     <FAQ />
     </>
