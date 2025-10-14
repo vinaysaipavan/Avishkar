@@ -1,21 +1,18 @@
 import './App.css';
-import { Letstalk } from './LetsTalk';
-import { FAQ } from './Faq';
-import { WHY } from './Why';
-import { Footer } from './footer';
-import { Process } from './process';
-import { Services } from "./services";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { MainPage } from './Components';
+import { About } from './about';
 
 function App() {
 
   return (
     <>
-    <Process />
-    <WHY />
-    <Services />
-    <Letstalk/>
-    <FAQ />
-    <Footer />
+     <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/about" element={<About />}></Route> 
+      </Routes>
+    </Router> 
     </>
   );
 }

@@ -1,8 +1,15 @@
 import "./App.css";
+import { NavLink } from "react-router-dom";
 import { IoCallSharp } from "react-icons/io5";
 import { FaEnvelope } from "react-icons/fa6";
 
 export function Footer() {
+    const handleScroll = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
   return (
     <>
         <footer className="border-t-4 border-red-500 bg-zinc-900 pt-4">
@@ -14,14 +21,14 @@ export function Footer() {
                     </div>
                     <div className="services">
                         <h1>Services</h1>
-                        <a href="">Web Development</a>
-                        <a href="">Mobile App Development</a>
-                        <a href="">UI/UX Design</a>
-                        <a href="">Digital Marketing</a>
-                        <a href="">Game Development</a>
-                        <a href="">Animations (2D & 3D)</a>
-                        <a href="">AI Automations</a>
-                        <a href="">IoT Engineering</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">Web Development</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">Mobile App Development</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">UI/UX Design</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">Digital Marketing</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">Game Development</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">Animations (2D & 3D)</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">AI Automations</a>
+                        <a onClick={()=>handleScroll("servicee")} className="cursor-pointer">IoT Engineering</a>
                     </div>
                     <div className="quick-links">
                         <h1>Quick Links</h1>
@@ -54,7 +61,8 @@ export function Footer() {
                     </div>
                 </div>
                 <hr />
-                <p className="rights">© 2025 Avishkar Tech Solutions. All rights reserved.</p>
+                <NavLink to="/about"><p className="rights">© 2025 Avishkar Tech Solutions. All rights reserved.</p></NavLink>
+                
             </div>
         </footer>
     </>

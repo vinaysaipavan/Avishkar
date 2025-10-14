@@ -46,7 +46,8 @@ export function Services() {
   }, []);
 
   return (
-    <div className="column flex flex-col md:px-[8vw] cursor-none relative overflow-hidden" ref={sectionRef}>
+    <div id="servicee" className="column flex flex-col md:px-[8vw] cursor-none relative overflow-hidden" ref={sectionRef}>
+      <h2 className="sm:text-4xl text-2xl font-bold my-8 text-center">Services we offer</h2>
       <div className="cursor2" ref={cursorRef}></div>
       <div className="row">
         <div className="white1">

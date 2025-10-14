@@ -78,7 +78,7 @@ export function Letstalk(){
 
     return(
         <>
-        <section className="py-6 xl:px-24 lg:px-16 md:px-16 talk">
+        <section className="py-6 xl:px-24 lg:px-16 md:px-16 talk min-h-[100vh]">
             <div className="flex-col-reverse flex md:flex-row md:justify-between items-center">
                 <div className="md:w-[40%] w-[85%] flex flex-col" ref={t3}>
                     <div className="Talk-box talk-b" onMouseEnter={PhoneEnter} onMouseLeave={PhoneLeave}>
