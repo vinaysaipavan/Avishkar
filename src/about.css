@@ -33,6 +33,11 @@
   z-index: 10000;
 }
 
+.about-section{
+  background: #a4c3b2;
+  cursor: none;
+}
+
 span h2 {
   display: inline;
   font-size: 26px;

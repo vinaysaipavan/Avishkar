@@ -28,8 +28,12 @@
   transition: 0.3s;
 }
 
+.white1{
+  background: #a4c3b2;
+}
+
 .black1{
-  @apply flex items-start rounded-2xl justify-center flex-col bg-black m-2.5 p-2.5 h-52
+  @apply flex items-start rounded-2xl justify-center flex-col bg-[#202c39] m-2.5 p-2.5 h-52
 }
 
 .black1 {
@@ -100,7 +104,7 @@
 }
 
 .cursor2 {
-  background-color: rgb(11, 11, 11);
+  background-color: rgb(241, 239, 239);
 }
 
 @media (max-width: 768px) {

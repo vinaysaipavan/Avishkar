@@ -8,6 +8,10 @@
     overflow: hidden;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .talk::before {
     content: "";
     position: absolute;
@@ -136,11 +140,7 @@ footer p {
 }
 
 .rights {
-    @apply text-center text-gray-500 mt-10
-}
-
-.rights:hover {
-    @apply text-white cursor-pointer
+    @apply text-center text-gray-500 mt-5
 }
 
 @media (max-width: 768px) {
@@ -162,6 +162,8 @@ footer p {
   }
 }
 
-
+.tech{
+  background: #202c39;
+}
 
 

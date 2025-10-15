@@ -6,18 +6,20 @@ import { Process } from './process';
 import { Services } from "./services";
 import { Technologies } from './techstacks';
 import { Works } from './works';
+import { Home } from './home';
 import './App.css';
 
 export function MainPage(){
     return(
         <>
-        <Works />
+        <Home /> 
+        <Services />
         <Technologies />
         <Process />
+        <Works />
         <WHY />
-        <Services />
-        <Letstalk/>
         <FAQ />
+        <Letstalk/>
         <Footer />
         </>
     )

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css"
 import { FaAndroid, FaReact } from "react-icons/fa";
 import {
   SiKotlin,
@@ -45,7 +46,7 @@ export function Technologies() {
   };
 
   return (
-    <section className="bg-black text-white sm:py-24 py-14 px-6 md:px-24 min-h-[80vh]">
+    <section className="tech text-white sm:py-24 py-14 px-6 md:px-24 min-h-[80vh]" id="technologies">
       <h2 className="text-3xl font-bold mb-8">Technologies</h2>
       <div className="flex gap-10 border-b border-gray-700 mb-10">
         {Object.keys(techStacks).map((tab) => (
@@ -54,7 +55,7 @@ export function Technologies() {
             onClick={() => setActiveTab(tab)}
             className={`pb-2 uppercase tracking-wide font-medium transition-all ${
               activeTab === tab
-                ? "text-orange-500 border-b-2 border-orange-500"
+                ? "text-[#3db3a5] border-b-2 border-[#3db3a5]"
                 : "text-gray-400 hover:text-white"
             }`}
           >
@@ -68,13 +69,13 @@ export function Technologies() {
             key={tech.name}
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
-            className="bg-orange-400 text-black py-10 rounded-lg relative group overflow-hidden flex flex-col items-center transition-all duration-500 hover:bg-orange-500"
+            className="bg-[#99e1d9] text-black py-10 rounded-lg relative group overflow-hidden flex flex-col items-center transition-all duration-500 hover:bg-[#3db3a5]"
           >
             <div className="mb-4">{tech.icon}</div>
             <div
               className={`h-[3px] w-16 mb-4 transition-all duration-500 ${
                 hoverIndex === index
-                  ? "bg-white opacity-100 scale-x-100"
+                  ? "bg-white opacity-0 scale-x-100"
                   : "bg-black opacity-100 scale-x-100"
               }`}
             ></div>

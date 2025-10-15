@@ -33,7 +33,7 @@ export function FAQ(){
     ]
     return(
         <>
-        <section className="py-6 xl:px-24 lg:px-16 md:px-12 px-6">
+        <section className="py-6 xl:px-24 lg:px-16 md:px-12 px-6" id="faq">
             <h1 className='H lg:text-4xl text-2xl font-medium md:font-normal py-6'>FAQ</h1>
             <div className='flex flex-col lg:w-[80%] md:w-[85%] sm:w-[90%] w-[97%]'>
                 {faqs.map((item, index) => (

@@ -42,9 +42,9 @@ export function Works() {
 
   return (
     <>
-      <div className="works-hero">
+      <div className="works-hero" id="our-works">
         <div className="works-subhero">
-          <h1 style={{ width: "200vh" }}>Previous works</h1>
+          <h1 style={{ width: "200vh",fontSize:"30px",fontWeight:"bold",color:"#202c39" }}>Previous works</h1>
 
           <div className="works-container">
             <img src="../digital-device-mockup.png" alt="" />
@@ -176,7 +176,7 @@ export function Works() {
                   you wish to entrust."
                 </p>
                 <div className="review-author">
-                  — Vinay Sai Pavan B., CEO of Tech Innovators
+                  — Sai, CEO of Tech Innovators
                 </div>
               </article>
 
@@ -189,7 +189,7 @@ export function Works() {
                   services — especially for businesses that want dependability."
                 </p>
                 <div className="review-author">
-                  — Johny As., CEO of Tech Innovators
+                  — Johny., CEO of Tech Innovators
                 </div>
               </article>
             </div>

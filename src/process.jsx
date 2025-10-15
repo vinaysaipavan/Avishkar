@@ -6,7 +6,7 @@ export function Process() {
       <div class="process bg-slate-200 flex flex-col justify-center items-center min-h-[100vh] w-[99vw] z-10 relative">
         <div class="process-gradient absolute w-[100%] h-[100%] -z-50 top-0 left-0"></div>
         <h1 class="process-hero text-center font-bold mb-2.5">Our Process</h1>
-        <p class="process-subhero text-center text-slate-200 py-2.5 text-lg px-5 mx-auto bg-orange-500">
+        <p class="process-subhero text-center text-[#99e1d9] py-2.5 text-lg px-5 mx-auto bg-[#202c39]">
           At Avishkar, we follow a structured process to ensure the successful
           delivery of high-quality applications that meet our clients' needs.
         </p>

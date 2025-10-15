@@ -78,7 +78,7 @@ export function Letstalk(){
 
     return(
         <>
-        <section className="py-6 xl:px-24 lg:px-16 md:px-16 talk min-h-[100vh]">
+        <section className="py-6 xl:px-24 lg:px-16 md:px-16 talk min-h-[100vh]" id="contact-us">
             <div className="flex-col-reverse flex md:flex-row md:justify-between items-center">
                 <div className="md:w-[40%] w-[85%] flex flex-col" ref={t3}>
                     <div className="Talk-box talk-b" onMouseEnter={PhoneEnter} onMouseLeave={PhoneLeave}>
@@ -124,7 +124,7 @@ export function Letstalk(){
                             )}
                         </div>
                         <textarea name="" placeholder="How can i help?" id="" className="inp"></textarea> 
-                        <button className="text-lg bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 w-28 h-12 rounded-md ml-4">Send Now</button> 
+                        <button className="text-lg bg-[#58bacd] w-28 h-12 rounded-md ml-4">Send Now</button> 
                     </div>
                 </div>
             </div>

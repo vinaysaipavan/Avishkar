@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom left, #ff3c00, #f1ecda);
+  background: linear-gradient(to bottom left, #202c39, #f1ecda);
   opacity: 0.5;
   z-index: -1000;
 }
@@ -35,7 +35,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ff3c00;
+  background-color: #202c39;
   padding: 10px 20px;
   border-radius: 20px;
 }
@@ -101,7 +101,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #f00, #000);
+  background: linear-gradient(180deg, #99e1d9, #000);
   z-index: 1000;
   opacity: 0;
   transition: 0.5s;

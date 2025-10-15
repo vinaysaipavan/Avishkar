@@ -32,10 +32,10 @@ export function Footer() {
                     </div>
                     <div className="quick-links">
                         <h1>Quick Links</h1>
-                        <a href="">Home</a>
-                        <a href="">Projects</a>
-                        <a href="">Careers</a>
-                        <a href="">Contact</a>
+                        <a onClick={()=>handleScroll("home")} className="cursor-pointer">Home</a>
+                        <a onClick={()=>handleScroll("our-works")} className="cursor-pointer">Projects</a>
+                        <a onClick={()=>handleScroll("faq")} className="cursor-pointer">FAQ</a>
+                        <a onClick={()=>handleScroll("contact-us")} className="cursor-pointer">Contact</a>
                     </div>
                     <div className="connect items-center">
                         <h1>Connect With Us</h1>
@@ -61,8 +61,7 @@ export function Footer() {
                     </div>
                 </div>
                 <hr />
-                <NavLink to="/about"><p className="rights">© 2025 Avishkar Tech Solutions. All rights reserved.</p></NavLink>
-                
+                <p className="rights">© 2025 Avishkar Tech Solutions. All rights reserved.</p>
             </div>
         </footer>
     </>
