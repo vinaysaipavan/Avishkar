@@ -98,7 +98,13 @@ html{
     @apply absolute -top-4  sm:left-[190px] left-[110px] z-20
 }
 .why-column1 #expert4 {
-    @apply absolute -top-4 sm:left-[260px] left-[150px] z-30
+    @apply absolute -top-4 sm:left-[260px] left-[150px]
+}
+.why-column1 #expert4{
+  z-index: 21;
+}
+.image-profile{
+  z-index: 22;
 }
 
 .why-column2 {

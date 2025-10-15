@@ -108,6 +108,10 @@
 }
 
 @media (max-width: 768px) {
+  .cursor2 {
+    display: none !important;
+  }
+
   .column {
     padding-left: 2vw;
     padding-right: 2vw;

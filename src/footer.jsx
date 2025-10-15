@@ -1,15 +1,33 @@
 import "./App.css";
-import { NavLink } from "react-router-dom";
 import { IoCallSharp } from "react-icons/io5";
 import { FaEnvelope } from "react-icons/fa6";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function Footer() {
+    const location = useLocation();
+    const navigate = useNavigate();
     const handleScroll = (id) => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
     };
+    const handleNavClick = (item) => {
+
+    if (item === "aboutt") {
+      return;
+    }
+
+    if (location.pathname === "/") {
+      const element = document.getElementById(item);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, null, `#${item}`);
+      }
+    } else {
+      navigate(`/#${item}`);
+    }
+  };
   return (
     <>
         <footer className="border-t-4 border-red-500 bg-zinc-900 pt-4">
@@ -32,10 +50,10 @@ export function Footer() {
                     </div>
                     <div className="quick-links">
                         <h1>Quick Links</h1>
-                        <a onClick={()=>handleScroll("home")} className="cursor-pointer">Home</a>
-                        <a onClick={()=>handleScroll("our-works")} className="cursor-pointer">Projects</a>
-                        <a onClick={()=>handleScroll("faq")} className="cursor-pointer">FAQ</a>
-                        <a onClick={()=>handleScroll("contact-us")} className="cursor-pointer">Contact</a>
+                        <a onClick={()=>handleNavClick("home")} className="cursor-pointer">Home</a>
+                        <a onClick={()=>handleNavClick("our-works")} className="cursor-pointer">Projects</a>
+                        <a onClick={()=>handleNavClick("faq")} className="cursor-pointer">FAQ</a>
+                        <a onClick={()=>handleNavClick("contact-us")} className="cursor-pointer">Contact</a>
                     </div>
                     <div className="connect items-center">
                         <h1>Connect With Us</h1>

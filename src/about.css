@@ -186,6 +186,9 @@ span h2 {
 }
 
 @media (max-width: 768px) {
+  .cursor{
+    display: none !important;
+  }
   .about-hero {
     margin: 0;
     padding: 0;

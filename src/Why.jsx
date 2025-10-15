@@ -11,7 +11,7 @@ export function WHY(){
                     <img src="../2.webp" alt="expert2" id="expert2"/>
                     <img src="../3.webp" alt="expert3" id="expert3"/>
                     <img src="../4.webp" alt="expert3" id="expert4"/>
-                    <div className="image-profile flex sm:w-28 sm:h-28 w-14 h-14 rounded-full text-center items-center justify-center text-[2.5rem] bg-emerald-400 relative -top-[20px] sm:left-[330px] left-[190px] z-50"><p className='text-black mt-[30px] sm:text-4xl text-2xl font-bold'>50+</p></div>
+                    <div className="image-profile flex sm:w-28 sm:h-28 w-14 h-14 rounded-full text-center items-center justify-center text-[2.5rem] bg-emerald-400 relative -top-[20px] sm:left-[330px] left-[190px]"><p className='text-black mt-[30px] sm:text-4xl text-2xl font-bold'>50+</p></div>
                     <p className='text-black text-left sm:text-xl text-base my-2 sm:px-9 px-3'>Experts ready to start with your project</p>
                     <h3 className='font-normal text-black text-left sm:text-4xl text-xl px-3'>We are not "blind coders" or "feature makers." We focus on creating the right product for the right people.</h3>
                  </div>
@@ -34,7 +34,7 @@ export function WHY(){
                             <img src="../Reason.webp" alt="" id="working-img" className='rounded-xl object-cover'/>
                         </div>
                         <div className="sm:flex-1 w-[150px] py-2.5 px-5 flex flex-col bg-emerald-400  rounded-xl items-center justify-center">
-                            <div class="counter text-[4rem] font-bold text-teal-400">85%</div>
+                            <div class="counter text-[4rem] font-bold text-white">85%</div>
                             <p className='text-black text-left text-[1.1rem]'>of developers are senior-level.</p>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css"
 import { FaAndroid, FaReact } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa6";
 import {
   SiKotlin,
   SiSwift,
@@ -39,7 +40,7 @@ export function Technologies() {
     Backend: [
       { name: "Python", icon: <SiPython size={40} /> },
       { name: "Java", icon: <FaJava size={40} /> },
-      { name: "Node.js", icon: <SiExpress size={40} /> },
+      { name: "Node.js", icon: <FaNodeJs size={40} /> },
       { name: "Express.js", icon: <SiExpress size={40} /> },
       { name: "MongoDB", icon: <SiMongodb size={40} /> },
     ],

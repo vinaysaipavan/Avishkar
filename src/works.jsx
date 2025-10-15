@@ -3,40 +3,50 @@ import { useEffect, useRef } from "react";
 
 export function Works() {
   const reviewsContentRef = useRef(null);
-  const revLeftRef = useRef(null);
-  const revRightRef = useRef(null);
 
   useEffect(() => {
     const reviewsContent = reviewsContentRef.current;
-    const revLeft = revLeftRef.current;
-    const revRight = revRightRef.current;
+    if (!reviewsContent) return;
 
-    if (!reviewsContent || !revLeft || !revRight) return;
+    // Optional: enable drag-to-scroll for better UX
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-    const scrollAmount = 300; // Adjust this value to control scroll distance
-
-    const scrollLeft = () => {
-      reviewsContent.scrollBy({
-        left: -scrollAmount,
-        behavior: 'smooth'
-      });
+    const handleMouseDown = (e) => {
+      isDown = true;
+      startX = e.pageX - reviewsContent.offsetLeft;
+      scrollLeft = reviewsContent.scrollLeft;
     };
 
-    const scrollRight = () => {
-      reviewsContent.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
+    const handleMouseLeave = () => {
+      isDown = false;
     };
 
-    // Add event listeners
-    revLeft.addEventListener('click', scrollLeft);
-    revRight.addEventListener('click', scrollRight);
+    const handleMouseUp = () => {
+      isDown = false;
+    };
 
-    // Clean up event listeners
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - reviewsContent.offsetLeft;
+      const walk = (x - startX) * 1.5; // scroll speed
+      reviewsContent.scrollLeft = scrollLeft - walk;
+    };
+
+    // add drag scrolling
+    reviewsContent.addEventListener("mousedown", handleMouseDown);
+    reviewsContent.addEventListener("mouseleave", handleMouseLeave);
+    reviewsContent.addEventListener("mouseup", handleMouseUp);
+    reviewsContent.addEventListener("mousemove", handleMouseMove);
+
+    // cleanup
     return () => {
-      revLeft.removeEventListener('click', scrollLeft);
-      revRight.removeEventListener('click', scrollRight);
+      reviewsContent.removeEventListener("mousedown", handleMouseDown);
+      reviewsContent.removeEventListener("mouseleave", handleMouseLeave);
+      reviewsContent.removeEventListener("mouseup", handleMouseUp);
+      reviewsContent.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -44,7 +54,16 @@ export function Works() {
     <>
       <div className="works-hero" id="our-works">
         <div className="works-subhero">
-          <h1 style={{ width: "200vh",fontSize:"30px",fontWeight:"bold",color:"#202c39" }}>Previous works</h1>
+          <h1
+            style={{
+              width: "200vh",
+              fontSize: "30px",
+              fontWeight: "bold",
+              color: "#202c39",
+            }}
+          >
+            Previous works
+          </h1>
 
           <div className="works-container">
             <img src="../digital-device-mockup.png" alt="" />
@@ -120,24 +139,16 @@ export function Works() {
           </div>
         </div>
 
+        {/* Reviews Section (without scroll buttons) */}
         <section className="reviews-hero" aria-labelledby="reviews-title">
           <h1 id="reviews-title">
             Our clients <span>love ❤️</span> us
           </h1>
 
           <div className="reviews-wrapper">
-            <button 
-              ref={revLeftRef}
-              id="rev-left" 
-              className="arrow-btn" 
-              aria-label="Scroll left"
-            >
-              <span className="chev"></span>
-            </button>
-
-            <div 
+            <div
               ref={reviewsContentRef}
-              className="reviews-content" 
+              className="reviews-content"
               role="list"
             >
               <article className="review-card" role="listitem">
@@ -193,15 +204,6 @@ export function Works() {
                 </div>
               </article>
             </div>
-
-            <button 
-              ref={revRightRef}
-              id="rev-right" 
-              className="arrow-btn" 
-              aria-label="Scroll right"
-            >
-              <span className="chev"></span>
-            </button>
           </div>
         </section>
       </div>

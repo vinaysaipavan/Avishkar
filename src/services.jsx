@@ -58,15 +58,13 @@ export function Services() {
           <div className="description">
             <p>
               Web application development combines cutting-edge technology and
-              innovative design to transform the digital landscape, empowering
-              businesses and individuals to thrive in the interconnected online
-              world on any screen.
+              innovative design to transform the digital landscape.
             </p>
           </div>
         </div>
         <div className="black1">
           <div className="head">
-            <div className="heading">App Development (IOS & Android)</div>
+            <div className="heading"><span>App Development</span><span>(IOS & Android)</span></div>
             <div className="number">002</div>
           </div>
           <div className="description">

@@ -6,7 +6,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { ImLeaf } from "react-icons/im";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import './App.css';
-import { useEffect, useRef, useState ,useLayoutEffect} from "react";
+import { useRef, useState ,useLayoutEffect} from "react";
 import gsap from "gsap";
 
 export function Letstalk(){
