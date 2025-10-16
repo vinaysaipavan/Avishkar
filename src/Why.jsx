@@ -27,7 +27,7 @@ export function WHY(){
                     </div>
                     <div class="flex gap-2.5">
                         <div className="sm:flex-1 w-[150px] py-2.5 px-5 flex flex-col bg-emerald-400 rounded-xl items-center justify-center">
-                            <p>Well-defined service standards for all clients.</p>
+                            <p className='text-sm md:text-lg'>Well-defined service standards for all clients.</p>
                             <img src="../Shape-reason-3.svg" alt="" id="shape3"/>
                         </div>
                         <div className='flex-1 sm:flex hidden'>

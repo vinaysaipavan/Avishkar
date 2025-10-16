@@ -1,8 +1,7 @@
 import { BsTelephone } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { ImLeaf } from "react-icons/im";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import './App.css';
@@ -13,6 +12,23 @@ export function Letstalk(){
     const [showButton,setShowButton] = useState(false);
     const [buttonHover,setButtonHover] = useState(false);
     const [mailHover,setMailHover] = useState(false);
+    const [selectedOption,setSelectedOption] = useState(null);
+    const enquiryOptions = [
+        "Website Development",
+        "App Development",
+        "Dedicated Development",
+        "AI Development"
+    ]
+
+    const handleOptionSelect = (option)=>{
+        setSelectedOption(option);
+        setShowButton(false);
+    }
+
+    const handleToggleDropdown = ()=>{
+        setShowButton(!showButton);
+    }
+
     const PhoneRef = useRef(null);
     const pinRef = useRef(null);
     const t1 = useRef(null);
@@ -85,14 +101,14 @@ export function Letstalk(){
                         <div><BsTelephone className="talk-icon" ref={PhoneRef}/></div>
                         <div className="talk-data">
                             <div><h2>CALL US ON</h2></div>
-                            <div><p>01732 753 101</p></div>
+                            <div><p>8431322728</p></div>
                         </div>
                     </div>
                     <div className="Talk-box talk-b" onMouseEnter={()=>setMailHover(true)} onMouseLeave={()=>setMailHover(false)}>
                         <div>{mailHover ? <FaRegEnvelopeOpen className="talk-icon"/> : <BsEnvelope className="talk-icon"/>}</div>
                         <div className="talk-data">
                             <div><h2>EMAIL US AT</h2></div>
-                            <div><p>info@chilliapple.co.uk</p></div>
+                            <div><p>info@avishkartechsolutions.com</p></div>
                         </div>
                     </div>
                     <div className="Talk-box talk-b" onMouseEnter={pinEnter} onMouseLeave={pinLeave}>
@@ -101,7 +117,7 @@ export function Letstalk(){
                         </div>
                         <div className="talk-data">
                             <div><h2>Find us at</h2></div>
-                            <div><p>Pluto House, 6 Vale Avenue, Tunbridge</p></div>
+                            <div><p>Madhapur, Hyderabad, Telengana 500081</p></div>
                         </div>
                     </div>
                 </div>
@@ -113,15 +129,30 @@ export function Letstalk(){
                         <input type="text" placeholder="Mobile number" className="inp"/>
                         <input type="text" placeholder="Website / URL" className="inp"/>    
                         <div className="w-full">
-                            <button className="md:w-[94%] w-[92%] pr-6 inp flex items-center justify-between enq transition duration-300" onClick={() => setShowButton(!showButton)} onMouseEnter={()=>setButtonHover(true)} onMouseLeave={()=>setButtonHover(false)}>Enquiry Type {buttonHover ? <IoIosArrowUp /> : <IoIosArrowDown />}</button>
+                            <button className="md:w-[94%] w-[92%] text-slate-500 pr-6 inp flex items-center justify-between enq transition duration-300" 
+                                onClick={handleToggleDropdown}
+                                onMouseEnter={() => setButtonHover(true)}
+                                onMouseLeave={() => setButtonHover(false)}
+                                >
+                                {selectedOption || "Enquiry Type"}{buttonHover ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                            </button>
                             {showButton && (
-                                <div className="top-full w-full left-0 ml-2 flex space-x-2 flex-col space-y-1">
-                                    <button className="bg-gray-300 py-2 px-4 ml-2 rounded w-[92%] text-left">Website Development</button>
-                                    <button className="bg-gray-300 py-2 px-4 rounded w-[92%] text-left">App Development</button>
-                                    <button className="bg-gray-300 py-2 px-4 rounded w-[92%] text-left">Dedicated Development</button>
-                                    <button className="bg-gray-300 py-2 px-4 rounded w-[92%] text-left">AI Development</button>
-                                </div>
-                            )}
+                            <div className="top-full w-full left-0 ml-2 flex space-x-2 flex-col space-y-1">
+                                {enquiryOptions.map((option, index) => (
+                                <button 
+                                    key={index}
+                                    className={`py-2 px-4 ml-2 rounded w-[92%] text-left transition duration-300 ${
+                                    selectedOption === option 
+                                    ? 'bg-blue-500 text-white' 
+                                    : 'bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                                onClick={() => handleOptionSelect(option)}
+                                >
+                                {option}
+                                </button>
+                            ))}
+                            </div>
+                        )}
                         </div>
                         <textarea name="" placeholder="How can i help?" id="" className="inp"></textarea> 
                         <button className="text-lg bg-[#58bacd] w-28 h-12 rounded-md ml-4">Send Now</button> 

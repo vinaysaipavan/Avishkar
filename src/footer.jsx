@@ -58,8 +58,8 @@ export function Footer() {
                     <div className="connect items-center">
                         <h1>Connect With Us</h1>
                         <div className="phone flex flex-col gap-2">
-                            <a href="tel:+918639863632" className="flex items-center gap-2"><IoCallSharp className="text-lg" />8639863632</a>
-                            <a href="tel:+919441813927" className="flex items-center gap-2"><IoCallSharp className="text-lg" />9441813927</a>
+                            <a href="tel:+918639863632" className="flex items-center gap-2"><IoCallSharp className="text-lg" />8431322728</a>
+                            <a href="tel:+919441813927" className="flex items-center gap-2"><IoCallSharp className="text-lg" />8660961882</a>
                         </div>
                         <div className="flex items-center mt-5">
                             <a href="mailto:info@avishkartechsolutions.com" className="flex items-center gap-2"><FaEnvelope className="text-lg" />info@avishkartechsolutions.com</a>
